@@ -5,6 +5,7 @@ int getNode(Node* head, int posFromTail) {
    Node* tail = head;
  
    // make sure how much at first tail needs to move to read at a pos from start
+   // in some cases index starts from 0, here its assumed that it starts from 1
    while(posFromTail > 1) {
       //printf("data: %d\n", tail->data);
       tail = tail->next;
