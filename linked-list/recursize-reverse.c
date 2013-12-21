@@ -10,10 +10,17 @@ Node* reverse(Node* head) {
    } else {
       first = head;
       rest = head->next;
-      
+     
+      // result starts up building in temp, starting from last node 
       temp = reverse(rest);
+      // rest of everything falls in place when list reverses
       first->next->next = first;
       first->next = NULL;
+      // only thing i felt wrong with this approach is function is doing 2 things at a time
+      //  - modifying list
+      //  - returning reversed list's head, that is last node
+      // this often seems wrong, since a function is only supposed to be doing 1 task
+      // this 
       return temp;
    }
 }
