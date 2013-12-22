@@ -1,8 +1,8 @@
-#include "link.h"
+#include "dlink.h"
 
-DNode* sortedInsert(DNode* head, int data) {
-   DNode *newNode = (DNode*)malloc(sizeof(DNode));
-   DNode *temp = NULL;
+Node* sortedInsert(Node* head, int data) {
+   Node *newNode = (Node*)malloc(sizeof(Node));
+   Node *temp = NULL;
 
    newNode->next = NULL;
    newNode->prev = NULL;
@@ -38,17 +38,17 @@ DNode* sortedInsert(DNode* head, int data) {
 }
 
 int main() {
-   DNode* h1 = NULL;
-   h1 = DInsert(h1, 1);
+   Node* h1 = NULL;
+   h1 = Insert(h1, 1);
    //h1 = DInsert(h1, 3);
    //h1 = DInsert(h1, 8);
    //h1 = DInsert(h1, 39);
    //h1 = DInsert(h1, 66);
    //h1 = DInsert(h1, 78);
 
-   DPrint(h1);
+   Print(h1);
    h1 = sortedInsert(h1, 2);
-   DPrint(h1);
+   Print(h1);
 
    
    return 0;
