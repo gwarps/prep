@@ -30,3 +30,36 @@ int Length(Node* head) {
    }
    return count;
 }
+
+
+// Doubly linked list operations
+
+DNode* DInsert(DNode* head, int data) {
+   DNode* newNode = (DNode*)malloc(sizeof(DNode));
+   newNode->data = data;
+   newNode->next = NULL;
+   newNode->prev = NULL;
+
+   if(head == NULL) {
+      return newNode;
+   }
+
+   DNode* temp = head;
+
+   while(temp->next != NULL) {
+      temp = temp->next;
+   }
+
+   temp->next = newNode;
+   newNode->prev = temp;
+
+   return head;
+}
+
+void DPrint(DNode* head) {
+   while(head != NULL) {
+      printf("[%d]<=>", head->data);
+      head = head->next;
+   }
+   printf("[NULL]\n");
+}
