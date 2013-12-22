@@ -21,3 +21,12 @@ void Print(Node* head) {
    }
    printf("NULL\n");
 }
+
+int Length(Node* head) {
+   int count = 0;
+   while(head != NULL) {
+      head = head->next;
+      count++;
+   }
+   return count;
+}

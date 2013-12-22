@@ -12,3 +12,5 @@ typedef struct node{
 Node* insert(Node* head, int data);
 void Print(Node* head);
 //void reverse(myNode** head,myNode** tail);
+
+int Length(Node* head);
